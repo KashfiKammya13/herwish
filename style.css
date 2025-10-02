@@ -1,0 +1,338 @@
+body{
+    margin : 0;
+  font-family: "Poppins", sans-serif;
+}
+h1{
+    font-size: 50px;
+}
+.highlight{
+    color: orangered;
+}
+.halfwidth{
+    width: 40%;
+    float : left;
+    margin-left: 5%;
+    padding-left: 2%;
+}
+.halfwidth img{
+    width: 100%;
+    border-radius: 40px;
+}
+.topbanner{
+    background-image: url(images/★✰✰★.jpeg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+section{
+    height: 500px;
+    padding-bottom: 100px;
+}
+.linkbutton{
+    text-decoration: none;
+    background-image: linear-gradient(45deg, green, white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.dreamarea{
+   background-image: url(images/124814a412e0f55897490234a3b79e8e.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+/* ===== ADD: Animated birthday cake (append at end of style.css) ===== */
+.bday-cake-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg,#fff7fb 0%, rgba(255,247,251,0) 60%);
+  font-family: inherit; /* keep your Poppins */
+  background-image: url('images/★✰✰★.jpeg');
+}
+
+.bday-title {
+  font-size: 30px;
+  color: orangered;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+.bday-cake {
+  position: relative;
+  width: 240px;
+  height: 210px;
+  margin: 0 auto;
+  transform-origin: center;
+  animation: bday-cake-breathe 4s ease-in-out infinite;
+}
+
+/* plate */
+.bday-plate {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 18px;
+  background: #e6e6e6;
+  border-radius: 50%;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  z-index: 1;
+}
+
+/* cake layers */
+.bday-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 16px;
+  box-shadow: inset 0 -6px 0 rgba(0,0,0,0.06);
+  z-index: 2;
+}
+
+.bday-bottom {
+  bottom: 26px;
+  width: 220px;
+  height: 56px;
+  background: linear-gradient(180deg, #ffcf90, #ffb347);
+}
+
+.bday-middle {
+  bottom: 86px;
+  width: 200px;
+  height: 56px;
+  background: linear-gradient(180deg, #ffb0b0, #ff9aa2);
+}
+
+.bday-top {
+  bottom: 144px;
+  width: 180px;
+  height: 48px;
+  background: linear-gradient(180deg, #ffd8e0, #ff9ec1);
+  border-radius: 12px;
+}
+
+/* candles container */
+.bday-candles {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 18px;
+  z-index: 3;
+}
+
+/* single candle */
+.bday-candle {
+  width: 14px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* wick */
+.bday-wick {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 6px;
+  background: #3a2b2b;
+  z-index: 4;
+  border-radius: 1px;
+}
+
+/* flame */
+.bday-flame {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 18px;
+  border-radius: 50% 50% 50% 50%;
+  background: radial-gradient(circle at 30% 30%, #fff28a 0%, #ffd700 30%, #ff8c00 60%);
+  filter: drop-shadow(0 0 8px rgba(255,160,0,0.75));
+  animation: bday-flame-flicker 0.8s infinite ease-in-out;
+  z-index: 5;
+}
+
+/* subtle glow below flame */
+.bday-flame::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,160,60,0.28), rgba(255,160,60,0));
+  z-index: 2;
+}
+
+/* small random offsets to make flames feel individual */
+.bday-candles .bday-candle:nth-child(1) .bday-flame { animation-delay: 0s; }
+.bday-candles .bday-candle:nth-child(2) .bday-flame { animation-delay: 0.15s; transform: translateX(-50%) scaleX(0.98); }
+.bday-candles .bday-candle:nth-child(3) .bday-flame { animation-delay: 0.28s; transform: translateX(-50%) scaleX(1.02); }
+
+/* messages */
+.bday-msg {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #c92a61;
+  font-weight: 600;
+}
+
+/* animations */
+@keyframes bday-flame-flicker {
+  0%   { transform: translateX(-50%) scale(1); opacity: 1; filter: drop-shadow(0 0 6px rgba(255,140,0,0.9)); }
+  40%  { transform: translateX(-52%) scale(1.12); opacity: 0.88; filter: drop-shadow(0 0 10px rgba(255,160,0,0.95)); }
+  70%  { transform: translateX(-49%) scale(0.9); opacity: 0.95; filter: drop-shadow(0 0 6px rgba(255,140,0,0.8)); }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; filter: drop-shadow(0 0 8px rgba(255,150,0,0.9)); }
+}
+
+@keyframes bday-cake-breathe {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* end of cake styles */
+/* Floating hearts animation */
+.bday-hearts {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bday-hearts span {
+  position: absolute;
+  bottom: -30px;
+  font-size: 22px;
+  animation: bday-float 6s linear infinite;
+  opacity: 0.8;
+}
+
+/* random positions & timings */
+.bday-hearts span:nth-child(1) { left: 20%; animation-delay: 0s; }
+.bday-hearts span:nth-child(2) { left: 40%; animation-delay: 2s; }
+.bday-hearts span:nth-child(3) { left: 60%; animation-delay: 4s; }
+.bday-hearts span:nth-child(4) { left: 75%; animation-delay: 1s; }
+.bday-hearts span:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+/* floating animation */
+@keyframes bday-float {
+  0%   { transform: translateY(0) scale(1); opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { transform: translateY(-180px) scale(1.2); opacity: 0.9; }
+  100% { transform: translateY(-350px) scale(0.8); opacity: 0; }
+}
+/* Confetti animation */
+.bday-confetti {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bday-confetti span {
+  position: absolute;
+  top: -40px;
+  font-size: 22px;
+  animation: bday-confetti-fall 6s linear infinite;
+  opacity: 0.9;
+}
+
+/* different positions & delays */
+.bday-confetti span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.bday-confetti span:nth-child(2) { left: 30%; animation-delay: 1s; }
+.bday-confetti span:nth-child(3) { left: 50%; animation-delay: 2s; }
+.bday-confetti span:nth-child(4) { left: 70%; animation-delay: 3s; }
+.bday-confetti span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+@keyframes bday-confetti-fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50%  { transform: translateY(200px) rotate(180deg); opacity: 0.8; }
+  100% { transform: translateY(400px) rotate(360deg); opacity: 0; }
+}
+
+
+
+/* ===== Mobile Compatibility Fixes (add at end of CSS) ===== */
+@media (max-width: 768px) {
+  .halfwidth {
+    width: 90% !important;
+    float: none !important;
+    margin: 10px auto !important;
+    text-align: center !important;
+  }
+
+  section {
+    height: auto !important;
+    padding: 30px 15px !important;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  .bday-title {
+    font-size: 22px !important;
+  }
+
+  .bday-msg {
+    font-size: 14px !important;
+  }
+
+  .linkbutton {
+    display: inline-block !important;
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+
+  .bday-cake {
+    transform: scale(0.85) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px !important;
+  }
+
+  .bday-title {
+    font-size: 18px !important;
+  }
+
+  .bday-msg {
+    font-size: 12px !important;
+  }
+
+  .bday-cake {
+    transform: scale(0.7) !important;
+  }
+}
